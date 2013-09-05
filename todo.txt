@@ -1,0 +1,36 @@
+
+/ ingest documents using infostudio code
+/ db trigger to convert to XHTML view for all documents under /imports/originals/
+/ alert on XHTML documents under /imports/xhtml/ to enrich them with known terms (one alert per term)
+/ db trigger on XHTML documents under /imports/xhtml/ to extract potential terms
+ / Extract all words without punctuation, that don't start a sentence, that do start with a capital letter
+ - ensure matching of these happens with a collation that doesn't include case sensitivity
+- webapp to manage flow
+ - start a new import
+ - monitor flow (like infostudio)
+ - show highlighted known terms
+ - show suggested terms
+ - allow confirmation of suggested terms
+  - remember to add alert for each new one
+ - allow highlight-and-create terms
+  - remember to add alert for each new one
+ - add terms to groups (dictionary?)
+ - add description of document itself
+  - title
+  - summary
+  - catelogue id
+  - folksonomic tagging
+  - existing structured tagging (which standard?)
+  - categories? hierarchy?
+ - suggest title terms (common words in document, excluding 'the', 'and' etc)
+  - need lexicon of common words to ignore (blacklist)
+ - suggest categorisation (cts:similar by full text content, tags, title, terms, catalogue ids)
+
+Bells and whistles
+- suggestions for typing in terms, tags, etc
+- speech to text
+- geolocation information from video, photos
+- place names enrichment
+- PDF version of each document to download
+- small/medium/large PDF page thumbnails of all documents
+ - and web UI FishEye control (DoJo experimental?)
